@@ -23,7 +23,7 @@ class Connection{
         $this->database=$database;
     }
     private function connect(){//server,user,pass,database
-        //$this->link=mysqli_connect($this->server,$this->user,$this->pass,$this->database);
+        $this->link=mysqli_connect($this->server,$this->user,$this->pass,$this->database);
         if ($this->link) {
             //echo "Conexion Exitosa";
         }else{

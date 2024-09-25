@@ -15,6 +15,9 @@
                             }else{
                                 include_once '../view/partials/content.php';
                             }
+                            if(!isset($_SESSION['auth'])){
+                                redirect("login.php");
+                            }
                         echo "</div>";
                     echo "</div>";
                     include_once '../view/partials/footer.php';

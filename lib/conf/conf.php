@@ -3,7 +3,7 @@
     $server="localhost";
     $user="root";
     $pass="";
-    $database="adso643";
+    $database="LABORATORIO_CLINICO";
     $port="3306";
 
 ?>
