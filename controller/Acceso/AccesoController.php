@@ -12,15 +12,13 @@
             $numeroId = $_POST['numeroId'];
             $fec_nac = $_POST['fec_nac'];
 
-            $sql = "SELECT id_persona, /*numeroId,*/ nombre1, nombre2, apellido1, apellido2, email, id_sexobiologico FROM gen_p_persona WHERE id_tipodoc = $id_tipodoc /*AND numeroId = '$numeroId'*/ AND fecha_nac = '$fec_nac'";
-
+            $sql = "SELECT id_persona,id_persona, nombre1, nombre2, apellido1, apellido2, email, id_sexobiologico FROM gen_p_persona WHERE id_tipodoc = $id_tipodoc AND id_persona = '$numeroId' AND fecha_nac = '$fec_nac'";
             $login = $obj->consultar($sql);
 
             if(mysqli_num_rows($login)>0){
 
                 foreach($login as $user){
                     $_SESSION['id_persona'] = $user['id_persona'];
-                    //$_SESSION['numeroId'] = $user['numeroId'];
                     $_SESSION['nombre1'] = $user['nombre1'];
                     $_SESSION['nombre2'] = $user['nombre2'];
                     $_SESSION['apellido1'] = $user['apellido1'];
@@ -34,7 +32,6 @@
             }else{
                 $_SESSION['error'] = "Los datos son incorrectos";
                 redirect("login.php");
-
             }
 
         }

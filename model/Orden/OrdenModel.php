@@ -1,5 +1,5 @@
 <?php
-    include_once "../modelo/MasterModel.php";
+    include_once "../model/MasterModel.php";
 
     class OrdenModel extends MasterModel{
 

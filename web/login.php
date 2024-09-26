@@ -28,7 +28,7 @@
                     <option value="">Seleccione</option>
                     <?php
                         foreach($tipo_documentos as $tip_doc){
-                            echo "<option value='".$tip_doc['id_documento']."'>".$tip_doc['nombre']."</option>";
+                            echo "<option value='".$tip_doc['id_documento']."'>".$tip_doc['nombre_doc']."</option>";
                         }
                     ?>
                 </select>

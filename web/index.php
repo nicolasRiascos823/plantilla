@@ -1,7 +1,9 @@
 <?php
 
     include_once '../lib/helpers.php';
-
+    if(!isset($_SESSION['auth'])){
+        redirect("login.php");
+    }
     include_once '../view/partials/header.php';
     echo "<body>";
         echo "<div class='wrapper'>";
@@ -12,12 +14,10 @@
                         echo "<div class='page-inner'>";
                             if(isset($_GET['modulo'])){
                                 resolve();
-                            }else{
-                                include_once '../view/partials/content.php';
+                            }else if(isset($_SESSION['auth'])){
+                                redirect(getUrl("Orden","Orden","getOrden_lab"));
                             }
-                            if(!isset($_SESSION['auth'])){
-                                redirect("login.php");
-                            }
+                           
                         echo "</div>";
                     echo "</div>";
                     include_once '../view/partials/footer.php';

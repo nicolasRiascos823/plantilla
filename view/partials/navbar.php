@@ -1,6 +1,6 @@
 <div class="main-header">
     <div class="main-header-logo">
-    <!-- Logo Header -->
+
     <div class="logo-header" data-background-color="white">
         <a href="index.php" class="logo">
         <img
@@ -22,9 +22,8 @@
         <i class="gg-more-vertical-alt"></i>
         </button>
     </div>
-    <!-- End Logo Header -->
     </div>
-    <!-- Navbar Header -->
+
     <nav
     class="navbar navbar-header navbar-header-transparent navbar-expand-lg border-bottom"
     >
@@ -86,7 +85,8 @@
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="<?=getUrl("Paciente","Paciente","getPerfil")?>">Mi Perfil</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="<?=getUrl("Acceso","Acceso","logout",false,"ajax")?>">Logout</a>
+                <a class="dropdown-item" href="<?=getUrl("Acceso","Acceso","logout",false,"ajax")?>">Cerrar sesion</a>
+                
                 </li>
             </div>
             </ul>
@@ -94,5 +94,5 @@
         </ul>
     </div>
     </nav>
-    <!-- End Navbar -->
+    
 </div>
